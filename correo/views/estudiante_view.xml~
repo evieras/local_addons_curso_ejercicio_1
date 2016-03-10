@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+	<menuitem
+	name="Menu 3er nivel"
+	id="menu_hola_mundo_vertical_2"
+	parent="menu_hola_mundo_vertical"
+	action="base.action_res_company_form"
+	sequence="10"
+	/>
+
+
+		
+</data>
+</openerp>

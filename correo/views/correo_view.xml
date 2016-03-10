@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+	
+	<record model="ir.ui.view" id="view_correo_form">
+	<field name="name">Cfg Correo</field>
+	<field name="model">cfg.correo</field>
+	<field name="type">form</field>
+	<field name="arch" type="xml">
+		<form string="Correo">
+		<sheet>
+		<group>
+			<field name="remitente"/>
+			<field name="receptor"/>
+			<field name="fecha_de_envio"/>
+			<field name="contenido"/>
+			<field name="archivos_adjuntos"/>
+			<field name="active"/>
+		</group>
+		</sheet>
+		</form>
+	</field>
+	</record>
+	
+	<record model="ir.ui.view" id="view_correo_tree">
+	<field name="name">Cfg Correo Tree</field>
+	<field name="model">cfg.correo</field>
+	<field name="type">tree</field>
+	<field name="arch" type="xml">
+		<tree string="Correo">
+			<field name="remitente"/>
+			<field name="receptor"/>
+			<field name="fecha_de_envio"/>
+			<field name="contenido"/>
+			<field name="archivos_adjuntos"/>
+			<field name="active"/>
+		</tree>
+	</field>
+	</record>
+	
+	<record model="ir.actions.act_window" id="action_cfg_correo">
+	<field name="name">Cfg Correo</field>
+	<field name="res_model">cfg.correo</field>
+	<field name="view_type">form</field>
+	<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem
+	name="Correo"
+	id="menu_Sup_Correo"
+	sequence="10"
+	/>
+	
+	<menuitem
+	name="Inicio-Mensajes"
+	id="menu_2_nivel_Correo"
+	parent="menu_Sup_Correo"
+	sequence="10"
+	
+	/><menuitem
+	name="Crear Correos"
+	id="menu_3_nivel_Correo"
+	parent="menu_2_nivel_Correo"
+	action="action_cfg_correo"
+	sequence="10"
+	/>
+	
+	
+		
+</data>
+</openerp>
